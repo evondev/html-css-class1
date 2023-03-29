@@ -254,3 +254,64 @@
 - \~ đứng cùng cấp là được
 - dấu cách tức là phần tử con là được
 - \> nghĩa là con trực tiếp
+
+# Flexbox
+
+- Thuộc tính là `display` và giá trị là `flex` hoặc `inline-flex`
+- _flex-direction_
+- `row`: theo chiều ngang từ trái qua phải
+- `row-reverse`: theo chiều ngang từ phải qua trái
+- `column`: theo chiều dọc từ trên xuống dưới
+- `column-reverse`: theo chiều dọc từ dưới lên trên
+- _align-items_
+- stretch(default): nó sẽ làm các phần tử cao bằng nhau nếu theo chiều ngang(row), rộng bằng nhau nếu chiều dọc(column)
+- `center`: canh giữa các phần tử
+- `flex-start`: canh phần trên đầu
+- `flex-end`: canh phần dưới cùng
+- `baseline`: liên quan tới typography, canh theo đít chữ của dòng đầu tiên
+- _flex-wrap_
+- `nowrap`: nó sẽ làm các phần tử luôn nằm trên 1 hàng khi container chứa nó không còn đủ diện tích
+- `wrap`: làm cho các phần tử xuống hàng khi không còn đủ diện tích
+- `wrap-reverse`: như wrap, nhưng thay vì rớt xuống thì nó sẽ rớt lên trên
+- _justify-content_
+- `flex-start`: các phần tử sẽ nằm dồn về phía bên trái
+- `flex-end`: các phần tử sẽ nằm dồn về phía bên phải
+- `center`: các phần tử sẽ nằm giữa thằng cha chứa nó
+- `space-between`: các phần tử sẽ tự động chia khoảng trống sao cho có 1 thằng nằm đầu, 1 thằng nằm cuối còn lại sẽ nằm giữa đảm bảo các khoảng trống bằng nhau, nếu chỉ có 2 phần tử thì 1 thằng đầu, 1 thằng cuối
+- `space-around`: các phần từ sẽ nằm rải rác và khoảng trống giữa 2 phần tử sẽ gấp đôi khoảng trống ở đầu cuối
+- `space-evenly`: khoảng trống giữa các phần tử sẽ bằng nhau
+- _gap_
+- `row-gap`: khoảng trống giữa các phần tử theo chiều dọc
+- `column-gap`: khoảng trống giữa các phần tử theo chiều ngang
+- gap: row-gap column-gap
+- gap: 10px 20px -> row-gap: 10px column-gap: 20px
+- gap: 10px -> row-gap=column-gap=10px
+- gap cũng tác động tới diện tích của container chứa các phần tử như margin
+- _flex-grow_
+- Cho phép các phần tử giãn ra(nếu giá trị lớn hơn 0) nếu container có đủ diện tích, số chúng ta truyền vào nếu như nhau tức là theo tỉ lệ thì bằng nhau, nếu có phần tử có số lơn thì cứ tính theo tỉ lệ. Nếu giá trị là 0 thì nó sẽ không giãn ra
+- _flex-shrink_
+- Cho phép các phần tử co lại nếu giá trị là 1, ngược lại nếu là 0 thì sẽ không co lại ở 1 kích thước nào đó(width, flex-basis), lưu ý nó chỉ có tác dụng khi chúng ta thiết lập độ rộng cố định với thuộc tính width hoặc flex-basis.
+- Nếu giá trị là 2 3 4... thì phần tử có giá trị lớn hơn sẽ co lại nhiều hơn, nếu ko có flex-basis thì vẫn co lại như nhau
+- _flex-basis_
+- Nếu làm việc theo chiều ngang(row) thì flex-basis lúc này sẽ là độ rộng tối thiểu, còn nếu là chiều dọc(column) thì nó sẽ là chiều cao tối thiểu
+- _flex_: grow shrink basis
+- 3 thằng ở trên code vào phần tử con - phần tử chịu tác động của flexbox
+- Đối với thẻ img là con trực tiếp bị tác động bởi flexbox thì hành vi của img hoạt động hơi khác so với các thẻ còn lại như div, section...
+- Thông thường ngta sẽ bọc thẻ img vào 1 div cho an toàn
+- flex-flow: flex-direction flex-wrap
+- hàm calc(1 + 2)
+- khi sử dụng calc thì các toán tử thực hiện phải có khoảng cách
+
+# Giải pháp chia cột theo yêu cầu trong khóa học
+
+- Xác định số cột -> 3 -> --columns: 3
+- Xác định gap -> 12px -> --gap: 12px
+<!-- - Xác định độ rộng -> 100% / số cột -> 100% / 3 -> calc(100% / var(--columns))
+- Xác định số lượng gap giữa các cột -> calc(var(--columns) - 1);
+- Xác định khoảng trống cần trừ ra của mỗi phần tử con -> --remove-spacing: calc((var(--gap) \* var(--gap-count)) / var(--columns));
+- Xác định độ rộng của phần tử sau cùng -> --item-width-final: calc(var(--item-width) - var(--remove-spacing)); -->
+  **Solution**
+  -> flex-basis: calc(
+  (100% / var(--columns)) - (var(--gap) \* (var(--columns) - 1)) /
+  var(--columns)
+  );

@@ -7,9 +7,37 @@ img {
   max-width: 100%;
 }
 body {
-  word-break: break-word;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 16px;
   font-weight: normal;
   background-color: #fff;
+}
+.wrapper {
+  display: flex;
+}
+.sidebar {
+  flex: 0 0 256px;
+}
+.main {
+  flex: 1;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 56px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background-color: #f0f3f6;
+  border-radius: 12px;
+}
+.search-text {
+  font-weight: 500;
+  font-size: 15px;
+  color: #a6a7b2;
+  line-height: calc(22 / 15);
 }

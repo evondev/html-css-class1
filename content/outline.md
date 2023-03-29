@@ -57,7 +57,6 @@
 - background: url, linear-gradient, position, repeat, attachment, size
 - variables
 - selectors: attribute, nth-child, nth-of-type, not, is, where, +, ~, >, spacing, group, ^, \*
-- font-face
 
 # Master Flexbox
 
@@ -72,6 +71,8 @@
 - align-content
 - order
 - calc
+- font-face
+-
 
 # Master Grid
 
