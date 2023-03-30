@@ -443,6 +443,7 @@ body {
     (100% / var(--columns)) - (var(--gap) * (var(--columns) - 1)) /
       var(--columns)
   );
+  flex-basis: calc(33.33% - 8px);
   /* flex: 0 1 calc(100% / var(--columns) - var(--final-gap)); */
   aspect-ratio: 1;
 }

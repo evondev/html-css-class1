@@ -315,3 +315,9 @@
   (100% / var(--columns)) - (var(--gap) \* (var(--columns) - 1)) /
   var(--columns)
   );
+
+# Pseudo
+
+- :hover rê chuột vào phần tử
+- .header:hover
+- (an + b) -> n chạy từ 0, a và b được chúng ta truỳen vào
