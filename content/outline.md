@@ -19,7 +19,7 @@
 - thu-trang-buoi1.zip
 - Thời hạn: càng sớm càng tốt
 
-# CSS cơ bản
+# Buổi 2+3: CSS cơ bản
 
 - Gõ nhanh HTML với Emmet nên biết
 - Xem chi tiết các thẻ ở đâu ?
@@ -39,7 +39,7 @@
 - hiểu về độ ưu tiên cơ bản
 - BTVN: Gom nhóm, đặt tên, sử dụng những thuộc tính đã học vào dự án thực tế PodcastUI
 
-# CSS Cơ bản tiếp theo
+# Buổi 4+5: CSS Cơ bản tiếp theo
 
 - Sửa bài
 - list-style
@@ -58,7 +58,7 @@
 - variables
 - selectors: attribute, nth-child, nth-of-type, not, is, where, +, ~, >, spacing, group, ^, \*
 
-# Master Flexbox
+# Buổi 6: Master Flexbox
 
 - flexbox
 - align-items
@@ -69,12 +69,18 @@
 - flex-grow
 - flex-basis
 - align-content
-- order
 - calc
-- font-face
--
 
-# Master Grid
+# Buổi 7: Responsive
+
+- svg
+- font-face
+- order
+- media queries
+- min-width
+- max-width
+
+# Buổi 8: Master Grid
 
 - grid
 - grid-template-columns
@@ -98,7 +104,7 @@
 - auto-fill
 - scroll-snap: stop, type, align
 
-# Master Position
+# Buổi 9: Master Position
 
 - position
 - relative
@@ -112,14 +118,14 @@
 - :before
 - :after
 
-#
+# Buổi 10: Master CSS3
 
 - transform: rotate, translate, skew, scale, 3d, perspective
 - transition
 - animation
 - translate vs top-right-bottom-left
 
-#
+# Buổi 11: Table
 
 - table
 - responsive
@@ -127,7 +133,7 @@
 - border
 - dropdown
 
-#
+# Buổi 12: FORM
 
 - form
 - input
@@ -137,63 +143,47 @@
 - button
 - attributes
 - pseudo: :focus, :valid, :invalid, :checked, :disabled, :read-only, :required, :out-of-range,
-
-#
-
 - custom checkbox, radio, dropdown, file
 - pseudo
 
-#
+# Buổi 13: PUG
 
-- responsive
-- media query
-- em rem px
-- container query
-- scroll
-- clamp
-- min
-- max
+- Components
+- Mixins
+- Layout
+- Variables
+- Object
+- Loop
+- Array
 
-#
+# Buổi 14: SASS
 
-- pug
-- code
-- block
-- mixin
-- loop
-- if else
-- variables
-- layout
-- extends
-- object
+- Variable
+- Nested
+- Import
+- Forward
+- Use
+- Mixin
+- Function
+- Conditional
+- Loop
+- Content
 
-#
-
-- sass
-- nested
-- variables
-- if else
-- mixin
-- function
-- loop
-- object
-- content
-- import
-- use
-- forward
-
-# Buổi 13
+# Buổi 15+16
 
 - UI UX cơ bản
 - Tùy biến giao diện Wordpress
 - Bí kíp ghi đè code
-- Git và Github cơ bản
 - text-rendering: optimizeLegibility;
 - -webkit-font-smoothing: antialiased;
 - -moz-osx-font-smoothing: grayscale;
 - scroll: behavior, margin, padding, custom, hide
 - pointer-events
-- shadow: inset, multiple
+- shadow: inset
 - pseudo: :root, :hover, :first-letter, :first-line, ::selection, :link, :visited, :active, :empty, ::marker
-- white-space
 - hiểu về độ ưu tiên chuyên sâu
+- container query
+- scroll
+- clamp
+- min
+- max
