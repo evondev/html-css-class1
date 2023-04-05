@@ -17,7 +17,7 @@
     <div class="wrapper">
       <aside class="sidebar">
         <a href="/" class="logo">
-          <img src="./images/logo.png" alt="gocast" class="logo-image" />
+          <img srcset="./images/logo.png 2x" alt="gocast" class="logo-image" />
         </a>
         <div class="sidebar-section">
           <ul class="menu">
@@ -138,6 +138,13 @@
       </aside>
       <main class="main">
         <div class="topbar">
+          <a href="/" class="topbar-logo">
+            <img
+              srcset="./images/logo.png 2x"
+              alt="gocast"
+              class="logo-image"
+            />
+          </a>
           <div class="search">
             <svg
               width="24"
@@ -283,7 +290,7 @@
                     <span>Play Now</span>
                   </button>
                 </div>
-                <div>
+                <div class="trending-image">
                   <img srcset="./images/man.png 2x" alt="" />
                 </div>
               </div>
@@ -321,10 +328,11 @@
                       </div>
                       <div class="feed-profile-info">
                         <div class="feed-name">
-                          <div>
-                            James Killened <span>rated an episude</span>
+                          <div>James Killened</div>
+                          <div class="feed-rating">
+                            <span>rated an episude</span>
+                            <img srcset="./images/rating-star.png 2x" alt="" />
                           </div>
-                          <img srcset="./images/rating-star.png 2x" alt="" />
                         </div>
                         <time datetime="Jun 25th" class="feed-time"
                           >Jun 25th</time

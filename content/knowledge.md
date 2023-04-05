@@ -321,3 +321,12 @@
 - :hover rê chuột vào phần tử
 - .header:hover
 - (an + b) -> n chạy từ 0, a và b được chúng ta truỳen vào
+
+# Responsive
+
+- Mobile first: code ban đầu sẽ là cho giao diện điện thoại trước, và sau đó dùng media queries để code cho những màn hình lớn hơn, chúng ta sẽ dùng media queries min-width
+- Desktop first: code ban đầu sẽ là cho giao diện máy tính trước, và sau đó dùng media queries để code cho những màn hình nhỏ hơn, chúng ta sẽ dùng media queries max-width
+- Có thể kết hợp cả min-width và max-width
+- Có thể sử dụng và(and), hoặc(,)
+- Trong media queries thì sử dụng breakpoints, breakpoints chuẩn thì tham khảo bootstrap
+- Breakpoints những điểm của độ rộng hoặc chiều cao của màn hình
