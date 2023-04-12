@@ -90,19 +90,21 @@
 - grid-area
 - grid-template-areas
 - align-items
-- justify-items
 - justify-content
-- align-content
 - gap
-- grid-auto-column
-- grid-auto-row
-- grid-auto-flow
 - repeat
 - minmax
 - track-line
-- auto-fit
-- auto-fill
+- grid-auto-column
+- grid-auto-row
+- grid-auto-flow
+- auto-fit vs auto-fill
 - scroll-snap: stop, type, align
+- align-self
+- align-content
+- justify-items
+- place-items -> align-items + justify-content
+- place-items: center -> align-items: center + justify-content: center
 
 # Buổi 9: Master Position
 
@@ -124,16 +126,13 @@
 - transition
 - animation
 - translate vs top-right-bottom-left
-
-# Buổi 11: Table
-
 - table
 - responsive
 - sticky
 - border
 - dropdown
 
-# Buổi 12: FORM
+# Buổi 11: FORM
 
 - form
 - input
@@ -146,7 +145,7 @@
 - custom checkbox, radio, dropdown, file
 - pseudo
 
-# Buổi 13: PUG
+# Buổi 12: PUG
 
 - Components
 - Mixins
@@ -156,7 +155,7 @@
 - Loop
 - Array
 
-# Buổi 14: SASS
+# Buổi 13: SASS
 
 - Variable
 - Nested
@@ -169,7 +168,7 @@
 - Loop
 - Content
 
-# Buổi 15+16
+# Buổi 14
 
 - UI UX cơ bản
 - Tùy biến giao diện Wordpress

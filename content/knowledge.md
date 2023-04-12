@@ -330,3 +330,36 @@
 - Có thể sử dụng và(and), hoặc(,)
 - Trong media queries thì sử dụng breakpoints, breakpoints chuẩn thì tham khảo bootstrap
 - Breakpoints những điểm của độ rộng hoặc chiều cao của màn hình
+
+# Grid
+
+- Thuộc tính display và giá trị sẽ là `grid` hoặc là `inline-grid`
+- Track line được đánh số thứ tự bắt đầu 1, cuối cùng là -1
+- Có track-line theo cột và theo hàng
+- Track line được đánh số dựa vào cột, track line cuối cùng là -1 hoặc số cột + 1
+- Track line được đánh số dựa vào hàng, track line cuối cùng là -1 hoặc số hàng + 1
+- grid-template-columns: cột1 cột2 cột3 cột4 cột n....
+- cột sẽ có giá trị là những cái đã học ví dụ như 100px 50% 2rem
+- hàm `repeat(số cột, giá trị`) -> repeat(4, 240px)
+- Khi chia cột nếu có sử dụng `gap` thì gap cũng được cộng vào độ rộng của container
+- Khi muốn chia bằng nhau sử dụng `gap` mà muốn các cột luôn đều và không bị quá độ rộng của container thì chúng ta nên sử dụng đơn vị `fr`
+- grid-template-rows: hàng1 hàng2 hàng3 hàng n...
+- Nếu số phần tử vượt quá số hàng đã thiết lập thì hàng mới sẽ có giá trị là auto
+- grid-column và grid-row: sử dụng cho phần tử con chịu tác động của phần tử cha dùng grid
+- grid-column: grid-column-start(track-line) / grid-column-end(track-line);
+- grid-row: grid-row-start(track-line) / grid-row-end(track-line);
+- grid-row và grid-column được xác định theo track-line
+- grid-template-areas: dùng cho phần tử cha dùng grid, chia layout tổng quan rất xịn xò
+- grid-area: dùng cho phần tử con dựa vào layout của grid-template-areas
+- grid-auto-flow: theo row hoặc column
+- grid-auto-rows: giá trị của row
+- grid-auto-columns: giá trị của column
+- auto-fit cố gắng lấp đầy hết khoảng trống của phần tử cha
+- auto-fill cố gắng lấp đủ số cột mà chúng ta thiết lập, nếu giá trị minmax của các phần tử cộng lại + gap lớn hơn phần tử cha thì nó sẽ rớt xuống hàng
+- repeat(auto-fill, minmax(100px, 1fr))
+- repeat(auto-fit, minmax(100px, 1fr))
+- align-self: áp dụng tương tự align-item nhưng chỉ cho phần tử con chính nó
+- align-content: chỉ hoạt động khi flex-wrap không phải là `nowrap`
+- align-content nếu flex-direction là row thì nó sẽ hoạt động theo chiều dọc
+- align-content nếu flex-direction là column thì nó sẽ hoạt động theo chiều ngang
+- align-content là toàn bộ content, khác với align-items là các phần tử canh với nhau
