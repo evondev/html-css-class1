@@ -363,3 +363,67 @@
 - align-content nếu flex-direction là row thì nó sẽ hoạt động theo chiều dọc
 - align-content nếu flex-direction là column thì nó sẽ hoạt động theo chiều ngang
 - align-content là toàn bộ content, khác với align-items là các phần tử canh với nhau
+
+# Position
+
+- Giá trị của nó gồm có `static` `relative` `absolute` `fixed` `sticky`
+- Đi kèm với thuộc tính position thì sẽ có các thuộc tính như top right bottom left z-index và inset
+
+## Relative
+
+- Khi sử dụng position: relative nó vẫn chiếm diện tích như bình thường
+- Khác với margin thì sử dụng những giá trị vào top right bottom left không tác động tới box-sizing của các phần tử khác, không ảnh hưởng tới layout khác
+- Các giá trị của top right bottom left có thể là số âm, đơn vị px % em rem
+- top: số âm thì đi lên trên, ngược lại đi xuống dưới
+- left: số âm thì đi qua trái, ngược lại đi qua phải
+- right: số âm thì đi qua phải, ngược lại đi qua trái
+- bottom: số âm thì đi xuống dưới, ngược lại đi lên trên
+- Thông thường position: relative dùng rất nhiều, dùng cho trường hợp có absolute chạy theo relative hoặc sticky chạy theo relative
+- Nếu giá trị của top right bottom left mà là % thì % đó chính là % của thằng chứa nó, top bottom là chiều cao, right left là độ rộng của thằng chứa nó
+
+## Absolute
+
+- Phải xác định phần tử sử dụng absolute chạy theo ai ? -> 1 phần tử chứa nó gần nhất có sử dụng thuộc tính position: relative hoặc là absolute
+- Phủ hết toàn bộ phần tử chứa nó thì dùng:
+- top right bottom left đều là 0
+- top left là 0 kết hợp với width: 100% và height: 100%
+- inset: 0;
+- inset: top right bottom left;
+- Phủ hết theo chiều ngang -> top: 0 left: 0 right: 0 hoặc top:0 left:0 + width: 100% + height: 1 giá trị nào đó tùy vào yêu cầu
+- Phủ hết theo chiều dọc -> top: 0 left: 0 bottom: 0 hoặc top:0 left:0 + height: 100% + width: 1 giá trị nào đó tùy vào yêu cầu
+- z-index: thứ tự ưu tiên hiển thị khi xếp lên nhau
+
+# Static
+
+- Thường dùng khi mà muốn đè code, hoặc là reset thuộc tính position
+
+# Fixed
+
+- Fixed thì nó không chạy theo ai cả
+- Fixed sẽ chạy theo body mà thôi
+- Fixed không chiếm diện tích như absolute
+- Khi sử dụng fixed thì ảnh hưởng tới layout nên cẩn thận khi sử dụng
+- margin không có tác dụng khi sử dụng fixed
+- padding của phần tử bao ngoài cũng không ảnh hưởng tới fixed
+
+# Sticky
+
+- Khi scroll chuột tới nó thì nó sẽ đứng im
+- Thông thường sẽ là top: value; right: value hoặc top: value; left: value
+
+# :before :after
+
+- Thuộc tính bắt buộc là content: ""
+- Nội dung trong content có thể có hoặc không
+- Về cơ bản thì before và after tương tự khi chúng ta thêm 2 thẻ html phía trước và sau phần tử muốn dùng, lưu ý trước sau ở đây nghĩa là bên trong phần tử đó ví dụ: <h4><span>before</span>content<span>after</span></h4>
+- Sử dụng 1 trong 2 hoặc 2 cái cùng lúc tùy thuộc yêu cầu bài toán
+
+# transform: translate
+
+- translateX(value) -> > 0 thì di chuyển qua phải, ngược lại qua trái
+- translateY(value) -> > 0 thì di chuyển xuống dưới, ngược lại lên trên
+- translate(x, y)
+- translate3d(x, y, z)
+- value có thể là px em rem là cố định giá trị
+- value là % nếu là X thì nó sẽ là độ rộng của phần tử đang dùng, 100% là full độ rộng
+- Nếu là Y thì nó sẽ là chiều cao của phần tử đang dùng, 100% là full chiều cao

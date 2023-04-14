@@ -112,28 +112,25 @@
 - relative
 - absolute
 - static
-- fixed
-- sticky
 - top, right, bottom, left
 - inset
 - z-index
+- fixed
+- sticky
 - :before
 - :after
+- transform: translate
 
 # Buổi 10: Master CSS3
 
-- transform: rotate, translate, skew, scale, 3d, perspective
 - transition
+- transform: rotate, translate, skew, scale, 3d, perspective
 - animation
-- translate vs top-right-bottom-left
 - table
 - responsive
 - sticky
 - border
 - dropdown
-
-# Buổi 11: FORM
-
 - form
 - input
 - textarea
@@ -145,7 +142,7 @@
 - custom checkbox, radio, dropdown, file
 - pseudo
 
-# Buổi 12: PUG
+# Buổi 11+12: PUG + SASS
 
 - Components
 - Mixins
@@ -154,9 +151,6 @@
 - Object
 - Loop
 - Array
-
-# Buổi 13: SASS
-
 - Variable
 - Nested
 - Import
@@ -168,7 +162,7 @@
 - Loop
 - Content
 
-# Buổi 14
+# Buổi 13
 
 - UI UX cơ bản
 - Tùy biến giao diện Wordpress
@@ -186,3 +180,7 @@
 - clamp
 - min
 - max
+
+# Buổi 14: Optimize
+
+- Linkedin
