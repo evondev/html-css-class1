@@ -447,7 +447,11 @@
 ## Chèn file pug
 
 - Sử dụng include -> include ./views/sidebar
-- Block là những khối chúng ta định nghĩa để sử dụng cho nội dung nào đó
+- `block` là những khối chúng ta định nghĩa để sử dụng cho nội dung nào đó
+- `extends` dùng để kế thừa layout
+- Khi sử dụng `block` thì nó sẽ không kế thừa những biến đã khai báo trước đó nếu có
+- Muốn kế thừa các biến hiện tại thì dùng `append blockName`
+- Khi sử dụng cấu trúc có `# {}` thì không cần sử dụng dấu = ở trước
 
 ## Mixins
 
@@ -455,5 +459,17 @@
 - mixin menuItem -> +menuItem
 - mixin menuItem(text, icon, url) -> +menuItem("evondev",<svg>, "https://evondev.com")
 - camelCase -> menuItem, blogItem, header, howToBecomeDev
+- Sử dụng biến thông thường trong mixin -> img(href= href)
+- Sử dụng biến trong chuỗi thì dùng dấu `${tên biến}` -> `background-color: ${bg}`
+
+## Object
+
+- Là 1 tập hợp có key và value -> {key: value} -> {age: 30}
+- {name: 'evondev', age: 30, school: 'Cao Thang'}
+- Để truy xuất giá trị của 1 key nào đó thì mình sẽ dùng cấu trúc `object.key` -> val.name -> 'evondev', val.age -> 30, val.school -> 'Cao Thang'
+
+## Array
+
+- Là 1 danh sách chứa nhiều phần tử, ngăn cách bởi dấu phẩy, các phần tử có thể là số, chữ, boolean(true, false), hoặc là object -> [1,2,3,4,5]
 
 # Sass

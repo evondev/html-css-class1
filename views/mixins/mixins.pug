@@ -4,3 +4,9 @@ mixin menuItem(href, title, icon)
       span.menu-icon
         img(src= icon, alt="")
       span= title
+
+mixin hostItem(image, name, bg)
+  li.host-item
+    .host-avatar(style=`background-color: ${bg}`)
+      img(src= image, alt)
+    span.host-name= name
