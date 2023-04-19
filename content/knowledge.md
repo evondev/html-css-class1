@@ -472,4 +472,8 @@
 
 - Là 1 danh sách chứa nhiều phần tử, ngăn cách bởi dấu phẩy, các phần tử có thể là số, chữ, boolean(true, false), hoặc là object -> [1,2,3,4,5]
 
+## Lưu ý
+
+- Nếu sử dụng pug mà bị lỗi dùng cả space và tab mà thông báo lỗi từ terminal thì dùng lệnh `ctrl + shift + P` và gõ `convert indentation to Tabs` rồi lưu lại để sửa lỗi
+
 # Sass
