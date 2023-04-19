@@ -427,3 +427,33 @@
 - value có thể là px em rem là cố định giá trị
 - value là % nếu là X thì nó sẽ là độ rộng của phần tử đang dùng, 100% là full độ rộng
 - Nếu là Y thì nó sẽ là chiều cao của phần tử đang dùng, 100% là full chiều cao
+
+# Pug
+
+- Cài đặt NodeJS
+- Mở vscode terminal _ctrl + `_
+- Chạy lệnh `npm install -g pug`
+- Chạy lệnh `npm install -g pug-cli`
+- Extensions: Convert HTML to Pug,
+- Pug không có các dấu đóng mở như html, xác định cha con thông qua tab size
+- Tài liệu tham khảo: https://pugjs.org/api/getting-started.html
+
+## Lệnh chạy file pug
+
+- Tạo file pug ví dụ index.pug -> index.html
+- Chạy lệnh `pug index.pug --pretty --watch`
+- `pug \*.pug --pretty --watch` chạy toàn bộ file pug
+
+## Chèn file pug
+
+- Sử dụng include -> include ./views/sidebar
+- Block là những khối chúng ta định nghĩa để sử dụng cho nội dung nào đó
+
+## Mixins
+
+- Cơ bản là component có thể tái sử dụng nhiều nơi và có thể thay đổi giá trị của từng component đó
+- mixin menuItem -> +menuItem
+- mixin menuItem(text, icon, url) -> +menuItem("evondev",<svg>, "https://evondev.com")
+- camelCase -> menuItem, blogItem, header, howToBecomeDev
+
+# Sass

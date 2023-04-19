@@ -121,28 +121,7 @@
 - :after
 - transform: translate
 
-# Buổi 10: Master CSS3
-
-- transition
-- transform: rotate, translate, skew, scale, 3d, perspective
-- animation
-- table
-- responsive
-- sticky
-- border
-- dropdown
-- form
-- input
-- textarea
-- select
-- with icon
-- button
-- attributes
-- pseudo: :focus, :valid, :invalid, :checked, :disabled, :read-only, :required, :out-of-range,
-- custom checkbox, radio, dropdown, file
-- pseudo
-
-# Buổi 11+12: PUG + SASS
+# Buổi 10: PUG
 
 - Components
 - Mixins
@@ -151,6 +130,9 @@
 - Object
 - Loop
 - Array
+
+# Buổi 11: SASS
+
 - Variable
 - Nested
 - Import
@@ -162,25 +144,40 @@
 - Loop
 - Content
 
-# Buổi 13
+# Buổi 12: Master CSS3
+
+- transition
+- transform: rotate, translate, skew, scale, 3d, perspective
+- animation
+- table
+- responsive
+- sticky
+- border
+- form
+- input
+- textarea
+- select
+- with icon
+- button
+- attributes
+- pseudo: :focus, :valid, :invalid, :checked, :disabled, :read-only, :required, :out-of-range,
+- custom checkbox, radio, dropdown, file
+- pseudo
+
+# Buổi 14
 
 - UI UX cơ bản
-- Tùy biến giao diện Wordpress
-- Bí kíp ghi đè code
-- text-rendering: optimizeLegibility;
-- -webkit-font-smoothing: antialiased;
-- -moz-osx-font-smoothing: grayscale;
+- Bí kíp ghi đè code phức tạp
 - scroll: behavior, margin, padding, custom, hide
 - pointer-events
 - shadow: inset
 - pseudo: :root, :hover, :first-letter, :first-line, ::selection, :link, :visited, :active, :empty, ::marker
 - hiểu về độ ưu tiên chuyên sâu
 - container query
-- scroll
 - clamp
 - min
 - max
 
-# Buổi 14: Optimize
+# Buổi 15
 
-- Linkedin
+# Buổi 16
