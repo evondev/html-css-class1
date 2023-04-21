@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font: inherit;
+}
+
+:root {
+  --natural: #676a6f;
+  --natural1: #f8f8f8;
+  --natural2: #f0f3f6;
+  --gray84: #8494ab;
+  --gradient-primary: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
+  --primary: #6c5dd3;
+  --black1: #1b1d21;
+  --black-primary: #232333;
+  --gray1: #5f6164;
+  --gray2: #a6a7b2;
+  --grayfc: #fcfcfc;
+  --icon-color: #a5b4cb;
+  --sidebar-w: 256px;
+  --topbar-h: 96px;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../fonts/IBMPlexSans-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../fonts/IBMPlexSans-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../fonts/IBMPlexSans-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../fonts/IBMPlexSans-Bold.ttf");
+  font-weight: 700;
+}
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #fff;
+  color: #5f6164;
+  overflow-x: hidden;
+}
+
+.section-heading {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--black1);
+  line-height: 1.5;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.button--primary {
+  background-color: var(--primary);
+  color: var(--grayfc);
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.sidebar {
+  flex: 0 0 256px;
+  padding: 48px 30px;
+  border-right: 1px solid var(--natural2);
+}
+
+.main {
+  flex: 1;
+  padding: 0 56px 84px;
+}
+
+/* Sidebar */
+.sidebar-section:not(:last-child) {
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid var(--natural2);
+}
+
+.sidebar-title {
+  padding: 0 21px;
+  font-size: 13px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: var(--gray84);
+}
+
+.logo {
+  display: block;
+  margin-bottom: 44px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  padding: 8px 30px 8px 20px;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray84);
+  border-radius: 12px;
+  /* transition: all 0.2s linear; */
+}
+
+.menu-link:hover {
+  /* active - hover */
+  background-image: var(--gradient-primary);
+  color: white;
+}
+
+.menu-icon {
+  flex: 0 0 24px;
+}
+
+.path-1,
+.path-2 {
+  fill: var(--icon-color);
+}
+
+.path-2 {
+  opacity: 0.7;
+}
+
+.menu-link:hover .path-1 {
+  fill: #a79ee5;
+}
+
+.menu-link:hover .path-2 {
+  fill: white;
+  opacity: 1;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.topbar-logo {
+  display: none;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.topbar-right > * {
+  flex-shrink: 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background-color: #f0f3f6;
+  border-radius: 12px;
+  flex: 0 1 360px;
+}
+
+.search-text {
+  font-weight: 500;
+  font-size: 15px;
+  color: #a6a7b2;
+  line-height: 1.4666666667;
+}
+
+/* button-upload */
+.button-upload {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  gap: 6px;
+  padding: 0 16px;
+  background-color: var(--primary);
+  border-radius: 8px;
+  height: 48px;
+  position: relative;
+}
+
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 100rem;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/*# sourceMappingURL=main.css.map */
