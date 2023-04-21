@@ -6,12 +6,10 @@ CSS reset margin and padding for all browsers
   padding: 0;
   box-sizing: border-box;
 }
-
 img {
   display: block;
   max-width: 100%;
 }
-
 html {
   font-size: 100%;
   font-size: 62.5%;
@@ -20,7 +18,6 @@ html {
     10px = 62.5% -> 1rem = 10px
   */
 }
-
 /*
 1. CSS selector structure
 selector1,
@@ -46,11 +43,9 @@ body {
   background-color: #fff;
   overflow-wrap: break-word;
 }
-
 button {
   cursor: pointer;
 }
-
 button,
 input,
 textarea,
@@ -62,7 +57,6 @@ select {
   border: none;
   outline: none;
 }
-
 .banner-heading {
   color: #6c5dd3;
   font-weight: 600;
@@ -72,7 +66,6 @@ select {
   display: inline-block;
   /* white-space: break-spaces; */
 }
-
 .feed-desc {
   line-height: 1.75;
   letter-spacing: 0.5px;
@@ -83,14 +76,12 @@ select {
   text-align: justify;
   text-indent: 20px;
 }
-
 .feed-desc a {
   text-decoration: underline;
   text-decoration: overline;
   text-decoration: line-through;
   text-decoration: none;
 }
-
 .text-overflow {
   /* white-space: nowrap; */
   color: #f62682;
@@ -101,18 +92,15 @@ select {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
-
 .card {
   width: 400px;
   height: 400px;
 }
-
 .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .boxed-texts {
   width: 500px;
   height: 100px;
@@ -125,7 +113,6 @@ select {
   overflow-x: scroll;
   /* overflow: visible; */
 }
-
 .avatar {
   width: 70px;
   height: 70px;
@@ -134,34 +121,28 @@ select {
   overflow: hidden;
   cursor: pointer;
 }
-
 ul,
 ol {
   margin: 20px;
 }
-
 ul {
   list-style-type: none;
 }
-
 body {
   padding: 50px;
 }
-
 .outline {
   width: 50px;
   height: 50px;
   outline: 5px solid red;
   border-radius: 100rem;
 }
-
 .boxed {
   width: 100px;
   height: 100px;
   background-color: #6a5af9;
   padding: 50px;
 }
-
 .boxed2 {
   margin-top: 20px;
   margin-left: 20px;
@@ -170,33 +151,28 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 .boxed3 {
   background-color: #f62682;
   margin-left: auto;
   margin-right: auto;
   display: inline-block;
 }
-
 .boxed-item {
   width: 200px;
   height: 100px;
   background-color: #20e3b2;
 }
-
 .boxed-item1 {
   margin-bottom: 20px;
 }
-
 .boxed-item2 {
   margin-top: 30px;
   display: inline-block;
   margin: 0 auto;
 }
-
 .follow {
   padding: 6px 18px;
-  background-color: hsl(248, 57%, 60%);
+  background-color: hsla(248, 57%, 60%, 1);
   color: white;
   font-size: 15px;
   line-height: 22px;
@@ -210,7 +186,6 @@ body {
   /* width: 82px; */
   /* height: 34px; */
 }
-
 .square {
   width: 50px;
   height: 50px;
@@ -222,13 +197,11 @@ body {
   border: 5px solid black;
   outline: 10px solid red;
 }
-
 .my-image img {
   width: 400px;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
-
 .square2 {
   width: 300px;
   height: 300px;
@@ -239,13 +212,11 @@ body {
   /* visibility: hidden; */
   display: none;
 }
-
 .viewport {
   width: 100%;
   height: 100%;
   background-color: #20e3b2;
 }
-
 .em {
   width: 10em;
   height: 10em;
@@ -255,7 +226,6 @@ body {
   /* 1em = 20px*/
   font-size: 20px;
 }
-
 .rem {
   width: 20rem;
   height: 20rem;
@@ -264,13 +234,11 @@ body {
   color: white;
   font-size: 20px;
 }
-
 .content {
   max-width: 31.25em;
   margin: 0 auto;
   line-height: 1.5;
 }
-
 .boxed-shadow {
   width: 200px;
   height: 100px;
@@ -281,7 +249,6 @@ body {
   /* box-shadow: -1px -3px 14px rgba(227, 230, 236, 0.2),
     -10px 24px 35px rgba(227, 230, 236, 0.25); */
 }
-
 .buy-now {
   padding: 15px 30px;
   border-radius: 12px;
@@ -295,7 +262,6 @@ body {
   margin: 0 auto;
   display: block;
 }
-
 .long-texxxt {
   width: 100%;
   max-width: 200px;
@@ -306,11 +272,9 @@ body {
   margin-top: 50px;
   /* color: black; */
 }
-
 .child {
   color: unset;
 }
-
 .background {
   width: 100%;
   height: 100vh;
@@ -318,15 +282,18 @@ body {
   /* background-repeat: no-repeat; */
   /* background-position: 25% 50%; */
   /* background-size: 50%; */
-  background: url("../images/Image.png") repeat center/cover;
+  background: url("../images/Image.png") repeat center / cover;
 }
-
 .background-linear {
   height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/Image.png");
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("../images/Image.png");
   background-size: cover;
 }
-
 .text-gradient {
   color: transparent;
   background-clip: text;
@@ -334,36 +301,29 @@ body {
   background-image: linear-gradient(to right, #00aefd, #2979ff);
   display: inline-block;
 }
-
 .button-primary {
   width: 100px;
   height: 100px;
   background-color: var(--primary-color, #20e3b2);
 }
-
 .boxed-primary {
   width: 333px;
   height: 111px;
   background-color: var(--secondary-color, #20e3b2);
 }
-
 .list-item {
   display: block;
   padding: 5px;
 }
-
 .list-item:first-child {
   background-color: #f62682;
 }
-
 .list-item:last-child {
   background-color: #2cccff;
 }
-
 .list-item:nth-child(2) {
   background-color: #ff6651;
 }
-
 .list-item:nth-last-child(2) {
   background-color: #20e3b2;
 }
@@ -375,57 +335,58 @@ body {
 .list-item:not(:first-child) {
   font-size: 20px;
 }
-
 .list-item:not(:last-child) {
   font-size: 20px;
 }
-
 .list-item:not(:nth-child(3)) {
   font-size: 20px;
 }
-
 .list-item:not(:nth-last-child(4)) {
   font-size: 20px;
 }
-
 .list-item:not(.list-item-special) {
   display: none;
 }
 
+.header h1,
+.header h2,
+.header h3,
+.header h4,
+.header h5,
+.header h6 {
+}
+.header :is(h1, h2, h3, h4, h5) {
+}
 .student {
   width: 100px;
   height: 100px;
   border-radius: 12px;
   background-color: cadetblue;
 }
-
 .student1,
 .student2 {
   width: 100px;
   height: 100px;
   border-radius: 12px;
 }
-
+.student1 + .student2 {
+}
 .student ~ .student1 {
   background-color: red;
 }
-
 .student ~ .student2 {
   background-color: purple;
 }
-
 .footer .column {
   /* width: 100px;
   height: 111px;
   background-color: black; */
 }
-
 .footer > .column {
   width: 100px;
   height: 111px;
   background-color: black;
 }
-
 /* layout */
 .layout {
   display: flex;
@@ -435,7 +396,6 @@ body {
   justify-content: flex-start;
   gap: 20px;
 }
-
 .layout-item {
   padding: 20px;
   background-color: #6a5af9;
@@ -446,11 +406,9 @@ body {
   flex-basis: 300px; */
   flex: 1 1 300px;
 }
-
 .layout-item2 {
   font-size: 50px;
 }
-
 .images {
   /* max-width: 332px; */
   /* --columns: 5;
@@ -469,7 +427,6 @@ body {
   flex-flow: row wrap;
   max-width: 800px;
 }
-
 /*
   columns: 3
   width: 100% / 3 = 33.333%
@@ -482,31 +439,29 @@ body {
   flex-shrink: 1;
   /* flex-basis: calc((100% / columns) - (gap * columns-1) / columns); */
   /* flex-basis: calc((100% / 3) - (12px * 2) / 3); */
-  flex-basis: calc(100% / var(--columns) - var(--gap) * (var(--columns) - 1) / var(--columns));
+  flex-basis: calc(
+    (100% / var(--columns)) - (var(--gap) * (var(--columns) - 1)) /
+      var(--columns)
+  );
   flex-basis: calc(33.33% - 8px);
   /* flex: 0 1 calc(100% / var(--columns) - var(--final-gap)); */
   aspect-ratio: 1;
 }
-
 .image-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
 }
-
 .rounded-image {
   width: 100px;
   height: 100px;
   border-radius: 100rem;
   box-shadow: 0 0 0 2px white, 0 0 0 4px #f62682;
 }
-
 .rounded-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
 }
-
-/*# sourceMappingURL=app.css.map */

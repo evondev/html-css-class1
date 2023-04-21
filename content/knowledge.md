@@ -477,3 +477,61 @@
 - Nếu sử dụng pug mà bị lỗi dùng cả space và tab mà thông báo lỗi từ terminal thì dùng lệnh `ctrl + shift + P` và gõ `convert indentation to Tabs` rồi lưu lại để sửa lỗi
 
 # Sass
+
+- CSS Preprocessor
+- main.scss main.sass
+
+## Cài đặt
+
+- Mở terminal trong vscode hoặc terminal bên ngoài bất kỳ sau đó chạy lệnh `npm install -g sass`
+- Truy cập vào thư mục chứa file .scss, chạy lệnh để generate file ví dụ `sass file-scss.scss file-css-generate.css --watch`
+- Nếu thấy dòng `Compiled app.scss to app.css.` nghĩa là thành công
+- Nếu thành dòng `No such file or directory` nghĩa là chạy sai dường dẫn hoặc sai file
+- Nếu file có dạng \_name.scss thì dạng này là dùng để import là chính chứ không phải để generate
+- Nếu file có dạng như bình thường thì dùng để generate
+- Để ra file riêng để dễ dàng quản lý
+
+## Variable
+
+- $primary-color: red;
+- color: $primary-color;
+
+## Nested
+
+- Tìm điểm chung của những class ví dụ .host, .host-item, .host-list, .host-heading -> Bắt đầu bằng chữ `.host`
+- Để nối từ ở trong Sass thì chúng ta dùng dấu `&` -> `&-item{}`, `&-list{}`, `&-heading{}`
+
+## @import @use @forward
+
+- @import -> Nó sẽ import code global, nếu để nó ở trên cùng thì những file được import ở dưới có thể sử dụng từ nó ví dụ ở trên cùng chúng ta import biến thì những file sass ở dưới có thể sử dụng những biến đó
+- @use -> Nó sẽ import theo dạng block scope
+- @forward -> Thông thường dùng để import những đoạn code có tính sử dụng chung như biến, function, mixins
+
+## Mixins
+
+- Những đoạn code sử dụng đi sử dụng lại và có thể tùy biến tùy thuộc vào giá trị mà chúng ta yêu cầu
+- Cách viết `@mixin name($var1, $var2....){code}`
+- Cách sử dụng `@include name(red, 5px...)`
+- Nếu gặp lỗi `mixin argument` nghĩa là quên truyền giá trị vào mixin
+- Giá trị mặc định có cấu trúc `$value: value`
+
+## Conditional
+
+- Điều kiện @if true {} @else {}
+- @if value -> value phải là đúng(true) hoặc là 1 điều kiện nào đó khác
+- @else là ngược lại của if
+- @else if
+
+## @each
+
+## @for
+
+## Function
+
+- Tài liệu tham khảo: https://www.tutorialsteacher.com/sass/sass-string-functions
+
+## Content
+
+- @content -> nội dung code truyền vào, thông thường sử dụng cho mixin responsive
+
+## Pattern 7-1
