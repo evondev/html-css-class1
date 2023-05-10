@@ -1,7 +1,12 @@
 aside.sidebar
   a.logo(href="/")
     img.logo-image(srcset="./images/logo.png 2x", alt="gocast")
-  .sidebar-section
+  .sidebar-widget
     ul.menu
-      +menuItem("/","Home", "./images/icon-dashboard.svg")
-      +menuItem("/trending.html","Trending", "./images/icon-dashboard.svg")
+      each item in [{href: '/', title: 'Home', icon: 'icon-graph'},{href: '/trending.html', title: 'Trending', icon: 'icon-chart'},{href: '/topics.html', title: 'Explore Topics', icon: 'icon-cube'}]
+        +menuItem(item.href, item.title, item.icon)
+  .sidebar-widget
+    h3.sidebar-heading Podcasters
+    ul.menu
+      each item in [{href: '/', title: 'Home', icon: 'icon-graph'},{href: '/trending.html', title: 'Trending', icon: 'icon-chart'},{href: '/topics.html', title: 'Explore Topics', icon: 'icon-cube'}]
+        +menuItem(item.href, item.title, item.icon)

@@ -164,7 +164,7 @@
 - custom checkbox, radio, dropdown, file
 - pseudo
 
-# Buổi 14
+# Buổi 13
 
 - UI UX cơ bản
 - Bí kíp ghi đè code phức tạp
@@ -178,6 +178,6 @@
 - min
 - max
 
-# Buổi 15
+# Buổi 14
 
-# Buổi 16
+# Buổi 15

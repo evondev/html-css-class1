@@ -1,1 +1,7 @@
-@use "./host";
+@use "./hosts";
+@use "./trending";
+.home-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 60px;
+}

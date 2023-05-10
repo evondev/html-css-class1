@@ -465,12 +465,22 @@
 ## Object
 
 - Là 1 tập hợp có key và value -> {key: value} -> {age: 30}
-- {name: 'evondev', age: 30, school: 'Cao Thang'}
+
+```js
+{name: 'evondev', age: 30, school: 'Cao Thang'}
+```
+
 - Để truy xuất giá trị của 1 key nào đó thì mình sẽ dùng cấu trúc `object.key` -> val.name -> 'evondev', val.age -> 30, val.school -> 'Cao Thang'
 
-## Array
+## Array( danh sách, mảng )
 
 - Là 1 danh sách chứa nhiều phần tử, ngăn cách bởi dấu phẩy, các phần tử có thể là số, chữ, boolean(true, false), hoặc là object -> [1,2,3,4,5]
+
+## Vòng lặp
+
+- each `val` in [1,2,3,4,5]
+- `val` tương ứng là 1,2,3,4,5
+- Nếu `val` là object thì sử dụng như kiến thức object đã chỉ ở trên val.name, val.href, val.icon
 
 ## Lưu ý
 
@@ -490,6 +500,7 @@
 - Nếu file có dạng \_name.scss thì dạng này là dùng để import là chính chứ không phải để generate
 - Nếu file có dạng như bình thường thì dùng để generate
 - Để ra file riêng để dễ dàng quản lý
+- Lệnh chạy nhiều file theo thư mục `sass thu-muc-sass:thu-muc-css --watch`
 
 ## Variable
 
@@ -506,6 +517,8 @@
 - @import -> Nó sẽ import code global, nếu để nó ở trên cùng thì những file được import ở dưới có thể sử dụng từ nó ví dụ ở trên cùng chúng ta import biến thì những file sass ở dưới có thể sử dụng những biến đó
 - @use -> Nó sẽ import theo dạng block scope
 - @forward -> Thông thường dùng để import những đoạn code có tính sử dụng chung như biến, function, mixins
+- @use "../abstracts/helper"; thì mặc định tên của file sẽ là `helper`, nếu muốn đổi tên thì dùng
+- @use "../abstracts/helper" as h;
 
 ## Mixins
 

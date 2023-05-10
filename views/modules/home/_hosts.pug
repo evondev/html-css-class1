@@ -1,0 +1,16 @@
+-
+  var hostLists = [
+   {image: "./images/host-avatar.png", name: "Thomas", bg:"#FFABC6"},
+   {image: "./images/host-avatar.png", name: "Darrell", bg:"#FFD381"},
+   {image: "./images/host-avatar.png", name: "Arlene", bg:"#B6AEE9"},
+   {image: "./images/host-avatar.png", name: "Kristin", bg:"#FFABC6"},
+   {image: "./images/host-avatar.png", name: "Courtney", bg:"#FFD381"},
+   {image: "./images/host-avatar.png", name: "Cody", bg:"#B6AEE9"},
+   {image: "./images/host-avatar.png", name: "Arlene", bg:"#FFABC6"},
+   ];
+
+.host
+  h2(class="section-heading host-heading") Popular Hosts
+  ul.host-list
+    each val in hostLists
+      +hostItem(val.image, val.name, val.bg)

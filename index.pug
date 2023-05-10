@@ -1,14 +1,10 @@
 extends ./views/layout.pug
+append styles
+  link(rel="stylesheet", href="./styles/home.css")
 append vars
-  - var hostLists = [{image: "./images/host-avatar.png", name: "Evondev", bg:"#ffb86c"}, {image: "./images/host-avatar.png", name: "Phuong Doan"},{image: "./images/host-avatar.png", name: "Hoang Huynh"},{image: "./images/host-avatar.png", name: "Nhut Tran"},{image: "./images/host-avatar.png", name: "Hoang Anh"},{image: "./images/host-avatar.png", name: "Thomas"}];
-
 block main
-  .main-container
-    .left-content
-      .host
-        h2(class="section-heading host-heading") Popular Hosts
-        ul.host-list
-          each val in hostLists
-            +hostItem(val.image, val.name, val.bg)
-
-    .right-content
+  .home-wrapper
+    .home-column
+      include ./views/modules/home/_hosts
+      include ./views/modules/home/_trending
+    .home-column

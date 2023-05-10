@@ -1,0 +1,13 @@
+@use "../abstracts/helper";
+
+.button {
+  @include helper.flex(center, center);
+  gap: 8px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  &--primary {
+    background-color: var(--primary);
+    color: var(--grayfc);
+  }
+}

@@ -2,11 +2,17 @@ mixin menuItem(href, title, icon)
   li.menu-item
     a.menu-link(href= href)
       span.menu-icon
-        img(src= icon, alt="")
+        case icon
+          when "icon-chart"
+            include ../icons/icon-chart
+          when "icon-graph"
+            include ../icons/icon-graph
+          when "icon-cube"
+            include ../icons/icon-cube
       span= title
 
 mixin hostItem(image, name, bg)
   li.host-item
-    .host-avatar(style=`background-color: ${bg}`)
+    .host-avatar(style=`--color: ${bg}`)
       img(src= image, alt)
     span.host-name= name

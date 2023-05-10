@@ -34,15 +34,8 @@
 }
 /* button-upload */
 .button-upload {
-  display: flex;
-  align-items: center;
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
   gap: 6px;
   padding: 0 16px;
-  background-color: var(--primary);
-  border-radius: 8px;
   height: 48px;
   position: relative;
 }

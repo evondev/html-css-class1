@@ -27,6 +27,13 @@ button {
   font: inherit;
 }
 
+.section-heading {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--black1);
+  line-height: 1.5;
+}
+
 :root {
   --natural: #676a6f;
   --natural1: #f8f8f8;
@@ -73,11 +80,8 @@ body {
   overflow-x: hidden;
 }
 
-.section-heading {
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--black1);
-  line-height: 1.5;
+:where(h1, h2, h3, h4, h5, h6) {
+  font: inherit;
 }
 
 .button {
@@ -89,7 +93,6 @@ body {
   font-size: 15px;
   font-weight: 600;
 }
-
 .button--primary {
   background-color: var(--primary);
   color: var(--grayfc);
@@ -113,19 +116,22 @@ body {
   padding: 0 56px 84px;
 }
 
-/* Sidebar */
-.sidebar-section:not(:last-child) {
-  padding-bottom: 26px;
-  margin-bottom: 26px;
-  border-bottom: 1px solid var(--natural2);
-}
-
-.sidebar-title {
+.sidebar-heading {
   padding: 0 21px;
   font-size: 13px;
   margin-bottom: 10px;
   font-weight: 400;
   color: var(--gray84);
+}
+.sidebar-widget {
+  --gap: 26px;
+}
+.sidebar-widget:after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: hsl(213, 33%, 94%);
+  margin-block: var(--gap);
 }
 
 .logo {
@@ -138,7 +144,6 @@ body {
   flex-direction: column;
   gap: 6px;
 }
-
 .menu-link {
   display: flex;
   align-items: center;
@@ -148,35 +153,20 @@ body {
   font-weight: 500;
   color: var(--gray84);
   border-radius: 12px;
-  /* transition: all 0.2s linear; */
 }
-
 .menu-link:hover {
-  /* active - hover */
   background-image: var(--gradient-primary);
   color: white;
 }
-
-.menu-icon {
-  flex: 0 0 24px;
-}
-
-.path-1,
-.path-2 {
-  fill: var(--icon-color);
-}
-
-.path-2 {
-  opacity: 0.7;
-}
-
-.menu-link:hover .path-1 {
-  fill: #a79ee5;
-}
-
-.menu-link:hover .path-2 {
+.menu-link:hover path[fill="#E5EAF1"] {
   fill: white;
   opacity: 1;
+}
+.menu-link:hover path[fill="#A5B4CB"] {
+  fill: hsl(248, 58%, 76%);
+}
+.menu-icon {
+  flex: 0 0 24px;
 }
 
 .topbar {
@@ -221,15 +211,8 @@ body {
 
 /* button-upload */
 .button-upload {
-  display: flex;
-  align-items: center;
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
   gap: 6px;
   padding: 0 16px;
-  background-color: var(--primary);
-  border-radius: 8px;
   height: 48px;
   position: relative;
 }

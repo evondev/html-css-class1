@@ -6,14 +6,3 @@
   color: var(--black1);
   line-height: calc(24 / 16);
 }
-.button {
-  @include helper.flex(center, center);
-  gap: 8px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
-}
-.button--primary {
-  background-color: var(--primary);
-  color: var(--grayfc);
-}

@@ -1,0 +1,36 @@
+.host {
+  margin-bottom: 28px;
+  &-heading {
+    margin-bottom: 20px;
+  }
+  .host-list {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    color: var(--gray1);
+  }
+
+  &-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 100rem;
+    object-fit: cover;
+    box-shadow: 0 0 0 3px white, 0 0 0 4px var(--color, #ffabc6);
+    background-color: var(--color, #ffabc6);
+    overflow: hidden;
+  }
+  &-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
