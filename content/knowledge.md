@@ -592,6 +592,7 @@
 
 - table, thead, tbody, tfoot, tr, td
 - table nếu dùng border-collapse: separate thì có thể dùng border-spacing, nếu là border-collapse: collapse thì không có sử dụng được border-spacing
-- Nếu dùng `border-collapse: separate` thì không thể css border cho thẻ `tr` được, muốn css border thì phải áp dụng cho thẻ `td`
+- Nếu dùng `border-collapse: separate` thì không thể css border cho thẻ `tr` được, muốn css border thì phải áp dụng cho thẻ `td`, nếu có radius thì cũng dùng cho thẻ `td`, nếu có hover đổi màu thì sẽ hover vào `tr` và tác động vào thẻ `td`
 - Responsive cách 1: dùng 1 thẻ bao ngoài rồi css width: 100% và overflow-x: auto;
 - Responsive cách 2: dùng custom attribute (data-cell)
+- sticky

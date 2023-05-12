@@ -1,3 +1,13 @@
+.team-sticky thead {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: white;
+}
+.team-sticky th {
+  padding-block: 25px;
+}
 .team-email {
   font-size: 16px;
   color: #5f6164;
@@ -21,6 +31,7 @@
 }
 .team-table {
   width: 100%;
+  overflow-x: auto;
 }
 .team-table table {
   width: 100%;
@@ -33,8 +44,10 @@
   border-radius: 4px;
   border: 1px solid #a6a7b2;
 }
-.team-table tr {
-  border-bottom: 1px solid #e4e4e4;
+@media (hover: hover) {
+  .team-table tr:hover td {
+    background-color: #eee;
+  }
 }
 .team-table th {
   text-align: left;
@@ -50,30 +63,69 @@
   font-size: 14px;
   font-weight: 500;
   color: #5f6164;
+  --rounded: 12px;
+}
+.team-table td:first-child {
+  border-radius: var(--rounded) 0 0 var(--rounded);
+}
+.team-table td:last-child {
+  border-radius: 0 var(--rounded) var(--rounded) 0;
+}
+.team-table th,
+.team-table td {
+  padding: 25px;
 }
 @media screen and (min-width: 768px) {
-  .team-table th:not(:first-child),
-  .team-table td:not(:first-child) {
+  .team-table.team-responsive th,
+  .team-table.team-responsive td {
     padding-inline: 25px;
   }
 }
 @media screen and (max-width: 767.98px) {
-  .team-table thead {
+  .team-table.team-responsive thead {
     display: none;
   }
-  .team-table tbody tr {
+  .team-table.team-responsive tbody tr {
     display: grid;
     grid-template-columns: auto;
   }
-  .team-table tbody td {
+  .team-table.team-responsive tbody td {
     display: grid;
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 60px minmax(0, 1fr);
     gap: 20px;
   }
-  .team-table tbody td:before {
+  .team-table.team-responsive tbody td:before {
     content: attr(data-cell);
     text-transform: capitalize;
   }
+}
+
+.sticky-horizontal tbody td:nth-child(1),
+.sticky-horizontal thead th:nth-child(1) {
+  position: sticky;
+  left: 0;
+  top: 0;
+  background-color: white;
+  z-index: 5;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.dropdown {
+  width: 200px;
+  position: relative;
+}
+.dropdown-select {
+  width: 100%;
+  border-radius: 12px;
+  background-color: #eee;
+  height: 50px;
+}
+.dropdown-list {
+  height: 200px;
+  width: 100px;
+  background-color: transparent;
+  border: 1px solid blue;
 }
 
 /*# sourceMappingURL=team.css.map */

@@ -1,5 +1,18 @@
 @use "./abstracts/helper";
 .team {
+  &-sticky {
+    // sticky table
+    thead {
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background-color: white;
+    }
+    th {
+      padding-block: 25px;
+    }
+  }
   &-email {
     font-size: 16px;
     color: helper.$black1;
@@ -23,12 +36,17 @@
   }
   &-table {
     width: 100%;
-    // overflow-x: auto;
+    overflow-x: auto;
     table {
       width: 100%;
       border-collapse: collapse;
+      // border-spacing: 10px;
       white-space: nowrap;
     }
+    // separate
+    // td {
+    //   border-bottom: 1px solid red;
+    // }
     .checkbox {
       width: 20px;
       height: 20px;
@@ -36,7 +54,19 @@
       border: 1px solid helper.$gray2;
     }
     tr {
-      border-bottom: 1px solid helper.$graye4;
+      // border-bottom: 1px solid helper.$graye4;
+      // &:nth-child(odd){
+      //   background-color: #eee;
+      // }
+      // &:nth-child(even) {
+      //   background-color: white;
+      // }
+      // border-radius: 8px;
+      @media (hover: hover) {
+        &:hover td {
+          background-color: #eee;
+        }
+      }
     }
     th {
       text-align: left;
@@ -52,32 +82,78 @@
       font-size: 14px;
       font-weight: 500;
       color: helper.$gray1;
+      --rounded: 12px;
+      &:first-child {
+        border-radius: var(--rounded) 0 0 var(--rounded);
+      }
+      &:last-child {
+        border-radius: 0 var(--rounded) var(--rounded) 0;
+      }
     }
-    @include helper.screenMin(768px) {
-      th,
-      td {
-        &:not(:first-child) {
+    th,
+    td {
+      padding: 25px;
+    }
+    &.team-responsive {
+      @include helper.screenMin(768px) {
+        th,
+        td {
           padding-inline: 25px;
+          // &:not(:first-child) {
+          //   padding-inline: 25px;
+          // }
+        }
+      }
+      @include helper.screenMax(767.98px) {
+        thead {
+          display: none;
+        }
+        tbody tr {
+          display: grid;
+          grid-template-columns: auto;
+        }
+        tbody td {
+          display: grid;
+          grid-template-columns: 60px minmax(0, 1fr);
+          gap: 20px;
+          &:before {
+            content: attr(data-cell);
+            text-transform: capitalize;
+          }
         }
       }
     }
-    @include helper.screenMax(767.98px) {
-      thead {
-        display: none;
-      }
-      tbody tr {
-        display: grid;
-        grid-template-columns: auto;
-      }
-      tbody td {
-        display: grid;
-        grid-template-columns: 60px 1fr;
-        gap: 20px;
-        &:before {
-          content: attr(data-cell);
-          text-transform: capitalize;
-        }
-      }
+    // sticky horizontal
+  }
+}
+.sticky-horizontal {
+  tbody td,
+  thead th {
+    &:nth-child(1) {
+      position: sticky;
+      left: 0;
+      top: 0;
+      background-color: white;
+      z-index: 5;
+      transform: translateZ(0);
+      backface-visibility: hidden;
     }
   }
 }
+.dropdown {
+  width: 200px;
+  position: relative;
+  &-select {
+    width: 100%;
+    border-radius: 12px;
+    background-color: #eee;
+    height: 50px;
+  }
+  &-list {
+    height: 200px;
+    width: 100px;
+    background-color: transparent;
+    border: 1px solid blue;
+  }
+}
+// portal

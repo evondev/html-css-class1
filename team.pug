@@ -3,8 +3,10 @@ append styles
   link(rel="stylesheet", href="./styles/team.css")
 block vars
   - var title = 'Team Page';
+  - var n = 0;
+
 block main
-  .team-table
+  .team-table.team-sticky.sticky-horizontal
     table
       thead
         tr
@@ -16,7 +18,7 @@ block main
           th &nbsp;
           th &nbsp;
       tbody
-        each val in [1,2,3,4,5,6,7]
+        while n < 1
           tr
             td(data-cell="select")
               .checkbox
@@ -27,4 +29,10 @@ block main
             td(data-cell="status") Can’t Resend yet
             td(data-cell="action")
               button.team-action-remove Remove invite
+              .dropdown
+                .dropdown-select select me
+
+          - n++
       tfoot
+
+  .dropdown-list
