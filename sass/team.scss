@@ -1,0 +1,83 @@
+@use "./abstracts/helper";
+.team {
+  &-email {
+    font-size: 16px;
+    color: helper.$black1;
+  }
+  &-action-remove {
+    color: helper.$support;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 143%;
+    padding: 3px 16px;
+    border-radius: 4px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background-color: currentColor;
+      opacity: 0.1;
+    }
+  }
+  &-table {
+    width: 100%;
+    // overflow-x: auto;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      white-space: nowrap;
+    }
+    .checkbox {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 1px solid helper.$gray2;
+    }
+    tr {
+      border-bottom: 1px solid helper.$graye4;
+    }
+    th {
+      text-align: left;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 143%;
+      color: helper.$gray2;
+      padding-bottom: 25px;
+    }
+    td {
+      text-align: left;
+      padding: 30px 0;
+      font-size: 14px;
+      font-weight: 500;
+      color: helper.$gray1;
+    }
+    @include helper.screenMin(768px) {
+      th,
+      td {
+        &:not(:first-child) {
+          padding-inline: 25px;
+        }
+      }
+    }
+    @include helper.screenMax(767.98px) {
+      thead {
+        display: none;
+      }
+      tbody tr {
+        display: grid;
+        grid-template-columns: auto;
+      }
+      tbody td {
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        gap: 20px;
+        &:before {
+          content: attr(data-cell);
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}

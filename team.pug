@@ -1,0 +1,30 @@
+extends ./views/layout.pug
+append styles
+  link(rel="stylesheet", href="./styles/team.css")
+block vars
+  - var title = 'Team Page';
+block main
+  .team-table
+    table
+      thead
+        tr
+          th
+            .checkbox
+          th Email
+          th Role
+          th Date
+          th &nbsp;
+          th &nbsp;
+      tbody
+        each val in [1,2,3,4,5,6,7]
+          tr
+            td(data-cell="select")
+              .checkbox
+            td(data-cell="email")
+              span.team-email uihutofficial@gmail.com
+            td(data-cell="role") Producer
+            td(data-cell="date") 16 Jul 2022
+            td(data-cell="status") Can’t Resend yet
+            td(data-cell="action")
+              button.team-action-remove Remove invite
+      tfoot

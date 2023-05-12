@@ -116,6 +116,18 @@ body {
   padding: 0 56px 84px;
 }
 
+@media screen and (max-width: 767.98px) {
+  .sidebar,
+  .topbar {
+    display: none !important;
+  }
+  .wrapper {
+    display: block;
+  }
+  .main {
+    padding: 24px;
+  }
+}
 .sidebar-heading {
   padding: 0 21px;
   font-size: 13px;

@@ -147,12 +147,15 @@
 # Buổi 13: Master CSS3
 
 - transition
-- transform: rotate, translate, skew, scale, 3d, perspective
+- transform: rotate, skew, scale,
 - animation
 - table
 - responsive
 - sticky
 - border
+
+# Buổi 14: Form
+
 - form
 - input
 - textarea
@@ -164,7 +167,7 @@
 - custom checkbox, radio, dropdown, file
 - pseudo
 
-# Buổi 14
+# Buổi 15
 
 - UI UX cơ bản
 - Bí kíp ghi đè code phức tạp
@@ -177,7 +180,6 @@
 - clamp
 - min
 - max
+- 3d, perspective
 
-# Buổi 14
-
-# Buổi 15
+# Buổi 16

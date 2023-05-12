@@ -551,8 +551,47 @@
 
 # CSS3
 
+## Transition
+
 - `transition`: Thuộc tính này dùng để làm cho chuyển động được mượt mà hơn, những thuộc tính được áp dụng ví dụ như opacity, transform, color, background-color, shadow, width...
 - Những thuộc tính không áp dụng được transition như display, top right bottom left,
 - Thường sử dụng vào phần tử trước khi được tác động(:hover)
 - cấu trúc: property(background-color, all) duration(0.5s) easing(linear, ease, ease-in, ease-in-out, ease-out, cubic-bezier) delay(1s)
 - transition: background-color 1s ease 0s;
+
+## Transform
+
+- `transform`: Thuộc tính này bản chất là thay đổi hình dạng của vật thể, nhưng không giống như box-sizing tức là nó sẽ ko gây ra khoảng cách cho các phần tử, nói tóm gọn là element đang dùng transform bản chất vẫn đứng yên.
+- Lưu ý: Những phần tử bên trong sẽ bị tác động theo, nếu không muốn bị tác động theo thì dùng lớp giả before hoặc after
+- `rotateX(deg)`: dùng để xoay vật thể theo chiều ngang
+- `rotateY(deg)`: xoay theo chiều dọc
+- `rotateZ(deg)`: xoay theo mặt phẳng trước mặt
+- `rotate(deg)`: giống rotateZ
+- `skewX(deg)`
+- `skewY(deg)`
+- `skew(deg)`
+- `scaleX(number)`
+- `scaleY(number)`
+- `scale(number)`
+
+## Animation
+
+- animation: chuyển động lặp đi lặp lại áp dụng những thuộc tính css vào
+- cú pháp: animation: animation-name(loading) animation-duration(1s) animation-iteration-count() animation-delay animation-timing-function animation-direction animation-fillmode;
+- keyframes: nếu chạy đơn giản thì dùng cú pháp from to
+- Nếu animation phức tạp thì dùng % (0 -> 100%)
+- animation-timing-function: ease, linear, ...
+- animation-duration: 0.5s, 1s
+- animation-name: spinner
+- animation-direction: normal(0 -> 100%), reverse(100% -> 0), alternate(0 -> 100%, 100% -> 0)
+- animation-fill-mode: forwards chạy xong rồi dừng, backwards chạy xong quay lại trạng thái ban đầu
+- animation-iteration-count: 1, infinite
+- animation-delay: 1s
+
+## Table
+
+- table, thead, tbody, tfoot, tr, td
+- table nếu dùng border-collapse: separate thì có thể dùng border-spacing, nếu là border-collapse: collapse thì không có sử dụng được border-spacing
+- Nếu dùng `border-collapse: separate` thì không thể css border cho thẻ `tr` được, muốn css border thì phải áp dụng cho thẻ `td`
+- Responsive cách 1: dùng 1 thẻ bao ngoài rồi css width: 100% và overflow-x: auto;
+- Responsive cách 2: dùng custom attribute (data-cell)

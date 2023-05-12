@@ -13,3 +13,15 @@
   flex: 1;
   padding: 0 56px 84px;
 }
+@media screen and (max-width: 767.98px) {
+  .sidebar,
+  .topbar {
+    display: none !important;
+  }
+  .wrapper {
+    display: block;
+  }
+  .main {
+    padding: 24px;
+  }
+}
