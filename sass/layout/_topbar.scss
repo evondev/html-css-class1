@@ -38,6 +38,10 @@
   padding: 0 16px;
   height: 48px;
   position: relative;
+  transition: all 0.5s ease;
+  &:hover {
+    opacity: 0.85;
+  }
 }
 .profile-avatar {
   width: 48px;

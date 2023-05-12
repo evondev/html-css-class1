@@ -548,3 +548,11 @@
 - @content -> nội dung code truyền vào, thông thường sử dụng cho mixin responsive
 
 ## Pattern 7-1
+
+# CSS3
+
+- `transition`: Thuộc tính này dùng để làm cho chuyển động được mượt mà hơn, những thuộc tính được áp dụng ví dụ như opacity, transform, color, background-color, shadow, width...
+- Những thuộc tính không áp dụng được transition như display, top right bottom left,
+- Thường sử dụng vào phần tử trước khi được tác động(:hover)
+- cấu trúc: property(background-color, all) duration(0.5s) easing(linear, ease, ease-in, ease-in-out, ease-out, cubic-bezier) delay(1s)
+- transition: background-color 1s ease 0s;

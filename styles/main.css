@@ -215,6 +215,10 @@ body {
   padding: 0 16px;
   height: 48px;
   position: relative;
+  transition: all 0.5s ease;
+}
+.button-upload:hover {
+  opacity: 0.85;
 }
 
 .profile-avatar {

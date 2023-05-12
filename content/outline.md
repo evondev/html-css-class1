@@ -144,7 +144,7 @@
 - Loop
 - Content
 
-# Buổi 12: Master CSS3
+# Buổi 13: Master CSS3
 
 - transition
 - transform: rotate, translate, skew, scale, 3d, perspective
@@ -164,7 +164,7 @@
 - custom checkbox, radio, dropdown, file
 - pseudo
 
-# Buổi 13
+# Buổi 14
 
 - UI UX cơ bản
 - Bí kíp ghi đè code phức tạp
