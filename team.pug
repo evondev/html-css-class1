@@ -6,6 +6,16 @@ block vars
   - var n = 0;
 
 block main
+  //- +dropdown
+  input(type="file", name="")
+  form
+    .input-wrapper
+      include ./views/icons/icon-profile
+      input.input(type="text" placeholder="pick your user name" disabled="")
+    input(type="submit" value="Update")
+    button(type="submit")
+      +spinner
+
   .team-table
     table
       thead

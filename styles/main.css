@@ -40,6 +40,20 @@ button {
   line-height: 1.5;
 }
 
+.spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 100rem;
+  border: 4px solid #6a5af9;
+  animation: loader 1s infinite linear;
+  border-top: 4px solid transparent;
+}
+
+@keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
+}
 :root {
   --natural: #676a6f;
   --natural1: #f8f8f8;
@@ -147,6 +161,107 @@ body {
 }
 .toggle-input:checked + .toggle .toggle-spinner {
   transform: translateX(12px);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown:hover .dropdown-list {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown-select {
+  padding: 12px 20px;
+  gap: 30px;
+  border-radius: 16px;
+  background: #f8f8f8;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  color: #a6a7b2;
+  font-size: 15px;
+  font-weight: 500;
+}
+.dropdown-list {
+  --top: 20px;
+  --radius: 16px;
+  border-radius: var(--radius);
+  background: #f8f8f8;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: var(--top);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 5;
+}
+.dropdown-list:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  height: var(--top);
+  transform: translateY(-100%);
+}
+.dropdown-item {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.dropdown-item:first-child {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+.dropdown-item:last-child {
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+.dropdown-item:hover {
+  color: white;
+  background-color: purple;
+}
+
+.input {
+  background: #ffffff;
+  border: 2px solid #e4e4e4;
+  border-radius: 12px;
+  padding: 12px;
+  padding-left: calc(var(--pl) + var(--icon-size) + var(--gap));
+  width: 308px;
+  transition: border 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  width: 100%;
+}
+.input:disabled {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+.input:valid {
+  border-color: #20e3b2;
+}
+.input:invalid {
+  border-color: #ff6651;
+}
+.input-wrapper {
+  --pl: 12px;
+  --icon-size: 24px;
+  --gap: 12px;
+  display: inline-block;
+  width: 300px;
+  position: relative;
+}
+.input-wrapper svg {
+  position: absolute;
+  left: var(--pl);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--icon-size);
 }
 
 .wrapper {

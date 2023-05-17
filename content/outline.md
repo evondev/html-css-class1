@@ -169,6 +169,9 @@
 
 # Buổi 15
 
+- Custom input file
+- Handle button loading
+- Xử lý với placeholder-show trong input
 - UI UX cơ bản
 - Bí kíp ghi đè code phức tạp
 - scroll: behavior, margin, padding, custom, hide
@@ -177,9 +180,16 @@
 - pseudo: :root, :hover, :first-letter, :first-line, ::selection, :link, :visited, :active, :empty, ::marker
 - hiểu về độ ưu tiên chuyên sâu
 - container query
+- style query
 - clamp
 - min
 - max
-- 3d, perspective
+- 3d, perspective, flip-card
 
 # Buổi 16
+
+- Nguồn học hay nên tham khảo
+- Cách học tiếng Anh
+- Cách sử dụng Notion hiệu quả để tối ưu hóa công việc
+- Nên học gì tiếp theo ?
+- Tặng Ebook UI UX

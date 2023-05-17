@@ -601,6 +601,8 @@
 
 - Thẻ `form` dùng để làm các tác vụ liên quan tới form, ví dụ giao diện đăng ký tài khoản, đăng nhập, sử dụng Javascript để xử lý logic và có sự kết hợp của Backend
 - Những thẻ trong form như input, textarea, button và select thì nó sẽ lấy font theo trình duyệt cho nên cần lưu ý thiết lập cho chúng kế thừa từ body
+- <input type="submit" value="Update"/>
+- <button type="submit"></button>
 
 ### Input
 

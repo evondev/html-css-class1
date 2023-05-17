@@ -30,3 +30,15 @@ mixin toggle
     input(type="checkbox", class="toggle-input")
     .toggle
       .toggle-spinner
+
+mixin dropdown
+  .dropdown
+    .dropdown-select
+      span Last 7 days
+      include ../icons/icon-cheveron
+    .dropdown-list
+      each val in [1,2,3]
+        .dropdown-item Last 7 days
+
+mixin spinner
+  .spinner

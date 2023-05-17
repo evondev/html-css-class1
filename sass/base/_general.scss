@@ -6,3 +6,16 @@
   color: var(--black1);
   line-height: calc(24 / 16);
 }
+.spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 100rem;
+  border: 4px solid #6a5af9;
+  animation: loader 1s infinite linear;
+  border-top: 4px solid transparent;
+}
+@keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
+}
