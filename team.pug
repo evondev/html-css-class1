@@ -6,12 +6,12 @@ block vars
   - var n = 0;
 
 block main
-  .team-table.team-sticky.sticky-horizontal
+  .team-table
     table
       thead
         tr
           th
-            .checkbox
+            +checkbox
           th Email
           th Role
           th Date
@@ -21,7 +21,7 @@ block main
         while n < 1
           tr
             td(data-cell="select")
-              .checkbox
+              +checkbox
             td(data-cell="email")
               span.team-email uihutofficial@gmail.com
             td(data-cell="role") Producer
@@ -29,10 +29,6 @@ block main
             td(data-cell="status") Can’t Resend yet
             td(data-cell="action")
               button.team-action-remove Remove invite
-              .dropdown
-                .dropdown-select select me
 
           - n++
       tfoot
-
-  .dropdown-list

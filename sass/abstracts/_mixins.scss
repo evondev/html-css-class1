@@ -18,10 +18,15 @@
   }
   button {
     cursor: pointer;
-    background-color: transparent;
+  }
+  input,
+  select,
+  textarea,
+  button {
+    font: inherit;
     border: none;
     outline: none;
-    font: inherit;
+    background-color: transparent;
   }
 }
 

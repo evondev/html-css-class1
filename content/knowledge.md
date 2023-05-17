@@ -596,3 +596,82 @@
 - Responsive cách 1: dùng 1 thẻ bao ngoài rồi css width: 100% và overflow-x: auto;
 - Responsive cách 2: dùng custom attribute (data-cell)
 - sticky
+
+## Form
+
+- Thẻ `form` dùng để làm các tác vụ liên quan tới form, ví dụ giao diện đăng ký tài khoản, đăng nhập, sử dụng Javascript để xử lý logic và có sự kết hợp của Backend
+- Những thẻ trong form như input, textarea, button và select thì nó sẽ lấy font theo trình duyệt cho nên cần lưu ý thiết lập cho chúng kế thừa từ body
+
+### Input
+
+- `input` có các attributes hay gặp như
+
+#### type
+
+- `text`: Cho phép nhập vào chữ hoặc số, nói chung gì cũng được
+- `number`: Nhập số, 2, 3, 5.5
+- `email`: Nhập vào địa chỉ email
+- `password`: Nhập vào mật khẩu hiển thị dưới dạng dấu \*
+- `phone`: Số điện thoại
+- `time`: Nhập vào thời gian
+- `date`: Nhập vào ngày
+- `submit`: Tương tự button submit, dùng để submit form
+- `checkbox`: Hiển thị checkbox, checkbox cho phép người dùng chọn nhiều ví dụ như sở thích
+- `radio`: Hiển thị radio, radio cho phép chọn 1 trong nhiều cái, ví dụ như giới tính chỉ được phép chọn nam hoặc nữ
+- `file`: Cho phép người dùng chọn tập tin
+- `reset`: Tương tự button reset, dùng để reset form
+- `range`: Hiển thị dưới dạng thanh bar, dạng như tiến trình
+
+#### placeholder
+
+- Hiển thị lớp chữ cho thẻ input, và nó sẽ mất khi chúng ta gõ vào input
+
+#### name
+
+- Là tên của thẻ input, thuộc tính này dùng để lấy dữ liệu khi làm việc với Javascript, sự kiện submit của form
+- Khi dùng với input có type là `checkbox` giúp chúng ta biết được người dùng chọn những cái nào
+- Khi dùng với input có type là `radio` giúp chúng ta biết được người dùng chọn cái nào
+
+### Other
+
+- `required`: Bắt buộc người dùng phải nhập vào
+- `readonly`: Không cho phép sửa input, nhưng khi submit form thì dữ liệu vẫn được gửi
+- `disabled`: Tương tự readonly, khác chỗ là khi submit form thì dữ liệu ko được gửi đi
+- `min`: Số tối thiểu
+- `max`: Số tối đa
+- `minlength`: Độ dài kí tự tối thiểu
+- `maxlength`: Độ dài kí tự tối đa
+- `autofocus`: Tự động focus vào thẻ input
+- `autocomplete="off"`: Dùng vào thẻ `form`, mục đích là cho phép tự động điền hay không
+- `inputmode`: Nó sẽ có các giá trị như search, email, tel, url, decimal, numeric
+
+### textarea
+
+- Thẻ này cho phép nhập nhiều dòng, thường dùng cho các kiểu nhập thông tin cá nhân hoặc là giới thiệu bản thân
+- có `rows` và `columns` tương ứng cho chiều cao và chiều dọc, nhưng khuyến khích dùng css width và height
+- có thuộc tính `resize` trong css cho phép người dùng kéo hoặc không cho kéo chiều cao hoặc chiều rộng của textarea
+
+### select
+
+- Hiển thị dưới dạng danh sách, cho phép người dùng chọn 1 hoặc nhiều tùy mục đích của giao diện
+- Thẻ `select` trình duyệt không cho phép tùy biến được nhiều cho nên là dev hay tùy biến lại bằng cách dùng cấu trúc ul li và sau đó dùng Javascript để truy xuất dữ liệu
+
+### Custom
+
+- Tùy biến lại giao diện của checkbox, radio, toggle hoặc select bằng việc dùng các thẻ HTML khác và kết hợp Javascript để lấy dữ liệu
+
+### pseudo (CSS)
+
+- `:focus`: Khi nhấn chuột vào input
+- `:valid`: Khi dữ liệu điền vào input thỏa yêu cầu
+- `:invalid`: Ngược lại với :valid
+- `:checked`: Khi input có type là `checkbox` hoặc `radio` được check vào
+- `:disabled`: Dựa vào attribute để xử lý 1 giao diện nào đó
+- `:read-only`:
+- `:required`:
+- `:out-of-range`:
+
+### label
+
+- Thẻ này dùng như các thẻ khác, là thẻ `inline`, đặc biệt có thuộc tính `for` và truyền vào `id` của input hoặc textarea
+- Nếu thẻ `label` bọc thẻ `input` có type là `checkbox` hoặc `radio` thì khi nhấn vào label nó sẽ tự động checked

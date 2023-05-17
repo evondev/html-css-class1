@@ -18,3 +18,15 @@ mixin hostItem(image, name, bg)
     .host-avatar(style=`--color: ${bg}`)
       img(src= image, alt)
     span.host-name= name
+
+mixin checkbox
+  label.checkbox-label
+    input(type="checkbox", class="checkbox-input")
+    .checkbox
+      include ../icons/icon-check
+
+mixin toggle
+  label.toggle-label
+    input(type="checkbox", class="toggle-input")
+    .toggle
+      .toggle-spinner

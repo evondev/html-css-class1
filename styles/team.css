@@ -38,12 +38,6 @@
   border-collapse: collapse;
   white-space: nowrap;
 }
-.team-table .checkbox {
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  border: 1px solid #a6a7b2;
-}
 @media (hover: hover) {
   .team-table tr:hover td {
     background-color: #eee;

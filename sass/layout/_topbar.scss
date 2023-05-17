@@ -1,3 +1,4 @@
+@use "../abstracts/helper" as helper;
 .topbar {
   display: flex;
   align-items: center;
@@ -25,12 +26,19 @@
   background-color: #f0f3f6;
   border-radius: 12px;
   flex: 0 1 360px;
-}
-.search-text {
-  font-weight: 500;
-  font-size: 15px;
-  color: #a6a7b2;
-  line-height: calc(22 / 15);
+  &-input {
+    flex: 1;
+    font-weight: 500;
+    font-size: 15px;
+    color: helper.$primary;
+    line-height: calc(22 / 15);
+    &::-webkit-input-placeholder {
+      color: helper.$gray2;
+    }
+    &::-moz-input-placeholder {
+      color: helper.$gray2;
+    }
+  }
 }
 /* button-upload */
 .button-upload {

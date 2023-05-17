@@ -1,0 +1,27 @@
+.toggle {
+  width: 30px;
+  height: 17px;
+  border-radius: 100rem;
+  background-color: #eee;
+  cursor: pointer;
+  padding: 1.5px 2px;
+
+  &-spinner {
+    width: 14px;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: inherit;
+    transition: transform 0.25s ease;
+  }
+  &-input {
+    display: none;
+  }
+  &-input:checked {
+    & + .toggle {
+      background: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
+    }
+    & + .toggle .toggle-spinner {
+      transform: translateX(12px);
+    }
+  }
+}
