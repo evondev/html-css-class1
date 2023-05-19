@@ -1,6 +1,13 @@
 @use "../abstracts/helper";
 
 .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 9;
+  width: var(--sidebar-w);
   &-heading {
     padding: 0 21px;
     font-size: 13px;

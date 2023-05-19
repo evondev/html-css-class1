@@ -3,9 +3,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 0;
-  margin-bottom: 30px;
   gap: 20px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  z-index: 9;
+  padding: 24px 56px;
+  height: var(--topbar-h);
 }
 .topbar-logo {
   display: none;

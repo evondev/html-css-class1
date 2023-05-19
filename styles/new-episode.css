@@ -1,0 +1,72 @@
+.upload {
+  background: #f8f8f8;
+  border: 1px solid #f4f4f4;
+  box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  cursor: pointer;
+}
+.upload-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #494a4d;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+.upload-caption {
+  font-weight: 400;
+  font-size: 12px;
+}
+.button-loading {
+  padding: 0 30px;
+  border-radius: 12px;
+  color: white;
+  background-color: #6a5af9;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 25px auto;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 165px;
+}
+.button-loading:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+.input-style {
+  position: relative;
+}
+.input-style span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  display: inline-block;
+  transition: top 0.25s linear;
+  padding-inline: 5px;
+  pointer-events: none;
+}
+.input-style input {
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  width: 300px;
+  color: #333;
+  transition: border 0.25s ease-out;
+}
+.input-style input:not(:placeholder-shown),
+.input-style input:focus {
+  border-color: #f62682;
+}
+.input-style input:not(:placeholder-shown) + span,
+.input-style input:focus + span {
+  top: 0;
+  background-color: white;
+}

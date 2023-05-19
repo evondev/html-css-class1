@@ -677,3 +677,21 @@
 
 - Thẻ này dùng như các thẻ khác, là thẻ `inline`, đặc biệt có thuộc tính `for` và truyền vào `id` của input hoặc textarea
 - Nếu thẻ `label` bọc thẻ `input` có type là `checkbox` hoặc `radio` thì khi nhấn vào label nó sẽ tự động checked
+
+## Textarea editor
+
+- Khung soạn thảo có nhiều option lựa chọn như in hoa in đậm... thông thường là dùng thư viện như ckeditor, quill,...
+
+##
+
+- pointer-events: none -> không hiển thị con trỏ cho phần tử, tức là không chọn được
+- placeholder-show -> Kiểm tra xem input có hiển thị placeholder không ?
+
+# Priority
+
+- (id, (class, attribute), tag)
+- x y z
+- x: Độ ưu tiên cao nhất như id, #header, #blog, #container
+- y: Độ ưu tiên thứ nhì như class, hoặc các attribute khác(href, alt, src...)
+- z: Độ ưu tiên thấp nhất như các thẻ p, div,...
+- inline styles có độ ưu tiên cao nhất, muốn đè được inline styles thì phải dùng `!important`

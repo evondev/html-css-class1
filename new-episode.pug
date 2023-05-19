@@ -1,0 +1,14 @@
+extends ./views/layout.pug
+append styles
+  link(rel="stylesheet", href="./styles/new-episode.css")
+block vars
+  - var title = 'New Episode Page';
+block main
+  +upload
+  button.button-loading
+    +spinner
+  button.button-loading Update account
+  .input-style
+    input(type="text" placeholder=" ")
+    span Name
+

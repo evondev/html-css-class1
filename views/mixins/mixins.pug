@@ -42,3 +42,10 @@ mixin dropdown
 
 mixin spinner
   .spinner
+
+mixin upload
+  label.upload
+    input(type="file", name="" hidden)
+    include ../icons/icon-upload
+    p.upload-title Drag and drop or browse to choose a file
+    p.upload-caption PNG, JPG and Gif files are allowed

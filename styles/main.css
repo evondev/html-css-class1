@@ -44,7 +44,7 @@ button {
   width: 20px;
   height: 20px;
   border-radius: 100rem;
-  border: 4px solid #6a5af9;
+  border: 4px solid #fff;
   animation: loader 1s infinite linear;
   border-top: 4px solid transparent;
 }
@@ -54,6 +54,58 @@ button {
     transform: rotate(360deg);
   }
 }
+#content {
+  scroll-margin-top: var(--topbar-h);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: var(--gradient-primary);
+  border-radius: 100rem;
+}
+
+#content::first-letter {
+  color: red;
+  font-size: 30px;
+}
+
+#content::first-line {
+  color: blue;
+}
+
+::selection {
+  background-color: orange;
+  color: white;
+}
+
+div:empty {
+  display: none;
+}
+
+.boxed {
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  width: clamp(300px, 50vw, 600px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 40px;
+  box-shadow: inset 1px -1px 11px 0px #ccc;
+}
+
+.section-heading {
+  font-weight: 600;
+}
+
 :root {
   --natural: #676a6f;
   --natural1: #f8f8f8;
@@ -91,6 +143,10 @@ button {
   src: url("../fonts/IBMPlexSans-Bold.ttf");
   font-weight: 700;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 16px;
@@ -278,8 +334,12 @@ body {
 }
 
 .main {
-  flex: 1;
   padding: 0 56px 84px;
+  width: calc(100% - var(--sidebar-w));
+  padding-top: var(--topbar-h);
+  top: 30px;
+  position: relative;
+  margin-left: auto;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -292,7 +352,17 @@ body {
   }
   .main {
     padding: 24px;
+    width: 100%;
   }
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 9;
+  width: var(--sidebar-w);
 }
 .sidebar-heading {
   padding: 0 21px;
@@ -351,9 +421,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 0;
-  margin-bottom: 30px;
   gap: 20px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  z-index: 9;
+  padding: 24px 56px;
+  height: var(--topbar-h);
 }
 
 .topbar-logo {
