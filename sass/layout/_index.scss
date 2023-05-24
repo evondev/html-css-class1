@@ -1,3 +1,19 @@
 @use "./wrapper";
 @use "./sidebar";
 @use "./topbar";
+.responsive-menu {
+  justify-content: space-between;
+  align-items: center;
+  gap: 27px;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 9;
+  padding: 14px 24px;
+  display: none;
+  @container main (max-width: 414px) {
+    display: flex;
+  }
+}

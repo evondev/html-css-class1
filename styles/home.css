@@ -4,11 +4,13 @@
 .host-heading {
   margin-bottom: 20px;
 }
-.host .host-list {
+.host-list {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   justify-content: space-between;
+  container-type: inline-size;
+  container-name: hostList;
 }
 .host-item {
   display: flex;
@@ -32,6 +34,58 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@container hostList (max-width: 600px) {
+  .host-item:nth-child(n+6) {
+    display: none;
+  }
+}
+
+.feed-section {
+  container-type: inline-size;
+  container-name: feedSection;
+}
+.feed-item {
+  padding: 20px;
+  border: 1px solid #f0f3f6;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  container-type: inline-size;
+  container-name: feedItem;
+}
+.feed-image {
+  flex: 0 0 152px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  width: 100%;
+}
+.feed-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.feed-content {
+  flex: 1;
+}
+.feed-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1b1d21;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+.feed-desc {
+  font-size: 13px;
+  line-height: 1.5;
+}
+@container feedSection (max-width: 500px) {
+  .feed-item {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 .home-wrapper {

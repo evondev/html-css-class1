@@ -1,0 +1,10 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sidebar-sep: #373a43;
+    --sidebar-text: #ababad;
+  }
+}
+[data-theme="dark"] {
+  --sidebar-sep: #373a43;
+  --sidebar-text: #ababad;
+}

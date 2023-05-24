@@ -16,6 +16,16 @@
   --sidebar-w: 256px;
   --topbar-h: 96px;
 }
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-body: #fff;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-body: #242731;
+  }
+}
 @font-face {
   font-family: "IBM Plex Sans";
   src: url("../fonts/IBMPlexSans-Regular.ttf");
@@ -43,7 +53,7 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  background-color: #fff;
+  background-color: var(--bg-body);
   color: helper.$black1;
   overflow-x: hidden;
 }

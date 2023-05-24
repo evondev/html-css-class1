@@ -3,11 +3,8 @@
   max-width: 1440px;
   margin: 0 auto;
   min-height: 100vh;
-}
-.sidebar {
-  flex: 0 0 256px;
-  padding: 48px 30px;
-  border-right: 1px solid var(--natural2);
+  container-type: inline-size;
+  container-name: main;
 }
 
 .main {

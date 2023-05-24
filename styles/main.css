@@ -85,10 +85,6 @@ button {
   color: white;
 }
 
-div:empty {
-  display: none;
-}
-
 .boxed {
   padding: 15px;
   border: 1px solid #eee;
@@ -123,6 +119,16 @@ div:empty {
   --topbar-h: 96px;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-body: #fff;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-body: #242731;
+  }
+}
 @font-face {
   font-family: "IBM Plex Sans";
   src: url("../fonts/IBMPlexSans-Regular.ttf");
@@ -151,7 +157,7 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  background-color: #fff;
+  background-color: var(--bg-body);
   color: #5f6164;
   overflow-x: hidden;
 }
@@ -325,12 +331,8 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   min-height: 100vh;
-}
-
-.sidebar {
-  flex: 0 0 256px;
-  padding: 48px 30px;
-  border-right: 1px solid var(--natural2);
+  container-type: inline-size;
+  container-name: main;
 }
 
 .main {
@@ -360,9 +362,12 @@ body {
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: white;
+  background-color: var(--bg-body);
   z-index: 9;
   width: var(--sidebar-w);
+  flex: 0 0 256px;
+  padding: 48px 30px;
+  border-right: 1px solid var(--sidebar-sep);
 }
 .sidebar-heading {
   padding: 0 21px;
@@ -378,7 +383,7 @@ body {
   content: "";
   display: block;
   height: 1px;
-  background-color: hsl(213, 33%, 94%);
+  background-color: var(--sidebar-sep);
   margin-block: var(--gap);
 }
 
@@ -399,7 +404,7 @@ body {
   gap: 10px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--gray84);
+  color: var(--sidebar-text);
   border-radius: 12px;
 }
 .menu-link:hover {
@@ -422,7 +427,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  background-color: white;
+  background-color: var(--bg-body);
   position: fixed;
   top: 0;
   left: var(--sidebar-w);
@@ -492,6 +497,47 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
+}
+
+.responsive-menu {
+  justify-content: space-between;
+  align-items: center;
+  gap: 27px;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 9;
+  padding: 14px 24px;
+  display: none;
+}
+@container main (max-width: 414px) {
+  .responsive-menu {
+    display: flex;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --sidebar-sep: #ebeff5;
+    --sidebar-text: #8494ab;
+  }
+}
+[data-theme=light] {
+  --sidebar-sep: #373a43;
+  --sidebar-text: #ababad;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sidebar-sep: #373a43;
+    --sidebar-text: #ababad;
+  }
+}
+[data-theme=dark] {
+  --sidebar-sep: #373a43;
+  --sidebar-text: #ababad;
 }
 
 /*# sourceMappingURL=main.css.map */

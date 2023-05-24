@@ -695,3 +695,23 @@
 - y: Độ ưu tiên thứ nhì như class, hoặc các attribute khác(href, alt, src...)
 - z: Độ ưu tiên thấp nhất như các thẻ p, div,...
 - inline styles có độ ưu tiên cao nhất, muốn đè được inline styles thì phải dùng `!important`
+
+# dark-mode
+
+- Khi làm giao diện có giao diện dark mode và light mode thì tốt nhất là lưu toàn bộ màu vào biến(CSS), sau đó làm mặc định 1 chế độ ví dụ light mode trước rồi copy toàn bộ biến sang darkmode rồi sửa lại cho phù hợp
+- Lưu ý nếu sử dụng toggle với JS thì nên dùng custom attribute như data-theme="dark" rồi tùy thuộc vào đó mà styling cho phù hợp
+
+# 3d
+
+- perspective
+- transform-style: preverse-3d
+- backface-visibility: hidden
+
+# container query
+
+- https://ishadeed.com/article/say-hello-to-css-container-queries/
+- @container feedSection (max-width: 500px) {}
+  -> feedSection sẽ là tên container của phần tử cha
+- @container feedItem (min-width: 501px) and style(--is-mobile: true) {}
+  -> feedItem sẽ là tên container của nó và nó có sử dụng variable là --is-mobile:true
+- Khi sử dụng container query thì phần tử con dùng position: fixed không hoạt động, thay vào đó dùng thử position: sticky, nếu mà vẫn chưa được như ý muốn thì chuyển sang dùng media query cho chắc

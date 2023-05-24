@@ -20,3 +20,7 @@ html(lang="en")
       main.main
         include ./topbar.pug
         block main
+      .responsive-menu
+        each val in [1,2,3,4,5]
+          .responsive-menu-item
+            include ./icons/icon-menu.pug

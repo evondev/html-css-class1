@@ -1,0 +1,10 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --sidebar-sep: #ebeff5;
+    --sidebar-text: #8494ab;
+  }
+}
+[data-theme="light"] {
+  --sidebar-sep: #373a43;
+  --sidebar-text: #ababad;
+}

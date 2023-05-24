@@ -189,10 +189,10 @@
 
 # Buổi 16
 
-- Cách sử dụng Notion hiệu quả để tối ưu hóa công việc
-- container query
-- style query
-- cqw
+- darkmode
 - backface-visibility
 - 3d, perspective, flip-card
+- container query
+- style query
 - responsive menu bottom
+- Cách sử dụng Notion hiệu quả để tối ưu hóa công việc

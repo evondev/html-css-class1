@@ -5,9 +5,12 @@
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: white;
+  background-color: var(--bg-body);
   z-index: 9;
   width: var(--sidebar-w);
+  flex: 0 0 256px;
+  padding: 48px 30px;
+  border-right: 1px solid var(--sidebar-sep);
   &-heading {
     padding: 0 21px;
     font-size: 13px;
@@ -21,7 +24,7 @@
       content: "";
       display: block;
       height: 1px;
-      background-color: helper.$graye9;
+      background-color: var(--sidebar-sep);
       margin-block: var(--gap);
     }
   }
@@ -41,7 +44,7 @@
     gap: 10px;
     font-size: 14px;
     font-weight: 500;
-    color: var(--gray84);
+    color: var(--sidebar-text);
     border-radius: 12px;
     &:hover {
       background-image: var(--gradient-primary);
